@@ -1,0 +1,47 @@
+/* -------------------------------------------------------------------------
+   Base reset — minimal, intentional.
+   MUI's CssBaseline (injected via ThemeProvider in main.jsx) handles the
+   rest: background colour, font smoothing, scrollbar styling.
+   ------------------------------------------------------------------------- */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin/padding from everything */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Make the root fill the viewport */
+html, body, #root {
+  height: 100%;
+}
+
+/* Smooth scrolling for anchor navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent text size inflation on mobile after orientation change */
+body {
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Better image defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons — MUI overrides these, but good baseline */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Avoid text overflow on long words */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
